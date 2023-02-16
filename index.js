@@ -26,7 +26,7 @@ app.use((req, res, next) => {
     req.headers.authorization &&
     req.headers.authorization.split(" ")[0] === "JWT"
   ) {
-    jsonwebtoken.verfiy(
+    jsonwebtoken.verify(
       req.headers.authorization.split(" ")[1],
       "Password",
       (err, decode) => {
